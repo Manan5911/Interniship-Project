@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;1,700&family=Ubuntu:wght@400;500;700&display=swap');
+
+
+:root{
+
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* navbar styling */
+
+.nav_head {
+    position: fixed;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 999;
+    /* background: crimson; */
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.nav_head .menu-nav li a {
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease; 
+}
+
+.nav_head .menu-nav li a:hover{
+    color: rgb(11, 115, 189);
+}
+
+.nav_head .logo-head a span {
+    color: rgb(11, 115, 189);
+    transition: all 0.3s ease;
+}
+
+.nav_head.sticky .logo-head a span {
+    color: aliceblue;
+}
+
+.nav_head.sticky .menu-nav li a:hover {
+    color: aliceblue;
+}
+
+.nav_head.sticky {
+    padding: 15px 0;
+    background: rgb(11, 115, 189);
+}
+
+.nav_head .logo-head a {
+    color: aliceblue;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.nav_head .menu-nav li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+}
+
+.nav_head .max-width-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.max-width-container {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* menu button styling */
+
+.menu-btn{
+    color: white;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+/* home section styling */
+
+.home {
+    display: flex;
+    background: url("123.jpg") no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    color: aliceblue;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width-container {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.home .home-content .text-2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-left: 7px;
+}
+
+.home .home-content .signupBtn{
+    width: 30%;
+    margin-left: 5px;
+    display: block;
+}
+
+.home .home-content .btn1{
+    background-color: rgb(11, 115, 189);
+    font-size: 16px;
+    display: block;
+    padding: 12px 28px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition-duration: 0.4s;
+}
+
+.home .home-content .btn1:hover{
+    background-color: rgb(1, 75, 128);
+}
+
+/* product section styling  */
+
+section{
+    padding: 50px 0;
+}
+
+.products{
+    font-family: 'Rubik', sans-serif;
+    background: #fff;
+    color: #111;
+}
+
+.products .title{
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.products .title::before{
+    content: "";
+    position: absolute;                                       /*  styling to be repeated */
+    width: 250px;
+    bottom: 0px;
+    left: 50%;
+    height: 3px;
+    background: #111;
+    transform: translateX(-49%);
+}
+.products .title::after{
+    content: "What we provide";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(11, 115, 189);
+    padding: 5px;
+    background: #fff;                                     /* background to be matched */
+    transform: translateX(-49%);
+}
+
+.products .product-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.products .product-content .card{
+    width: calc(50% - 20px);
+    background: #e9eaec;
+    text-align: center;
+    border-radius: 6px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.products .product-content .card i{
+    font-size: 50px;
+    color: rgb(11, 115, 189);
+    transition: color 0.3s ease;
+}
+
+.products .product-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 10px 0;
+    letter-spacing: 0.5px;
+    transition: all 0.5s ease;
+}
+
+.products .product-content .card:hover{
+    background: rgb(11, 115, 189);
+}
+
+.products .product-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.products .product-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.products .product-content .card:hover i{
+    color: #fff;
+}
+
+.products .product-content .card:hover .text{
+    color: #fff;
+}
+
+.products .product-content .card:hover p{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* reviews section styling */
+
+.reviews{
+    font-family: 'Rubik', sans-serif;
+}
+
+.reviews .title{
+    text-align: center;
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.reviews .title::before{
+    content: "";
+    position: absolute;                                       /*  styling to be repeated */
+    width: 250px;
+    bottom: 0px;
+    left: 50%;
+    height: 3px;
+    background: black;
+    transform: translateX(-49%);
+}
+
+.reviews .title::after{
+    content: "Response we got";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(11, 115, 189);
+    padding: 5px;
+    background: #fff;                                     /* background to be matched */
+    transform: translateX(-49%);
+}
+
+.reviews .review-slider{
+    padding: 1rem;
+}
+
+.reviews .review-slider .box{
+    background: #fff;   
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    outline: var(--outline);
+    box-shadow: var(--box-shadow);
+    transition: 0.2s linear;
+}
+
+.reviews .review-slider .box:hover{
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
+
+.reviews .review-slider .box img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.reviews .review-slider .box p{
+    padding: 1rem 0;
+    line-height: 1.8;
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+.reviews .review-slider .box h3{
+    padding-bottom: 0.5rem;
+    color: var(--black);
+    font-size: 2.2rem;
+}
+
+.reviews .review-slider .box .stars i{
+    color: var(--orange);
+    font-size: 1.7rem;
+}
+
+/* footer section styling */
+
+.footer{
+    background: #fff;
+    padding: 2rem 9%;
+    font-family: 'Rubik', sans-serif;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box {
+    padding-left: 6px;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    padding: 1rem 0;
+}
+
+.footer .box-container .box h3 span{
+    color: rgb(11, 115, 189);
+}
+
+.footer .box-container .box .links{
+    display: block;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 5px; 
+    transition: all 0.3s ease;
+}
+
+.footer .box-container .box .links i{
+    color: rgb(11, 115, 189);
+    padding-right: 0.5rem;
+}
+
+.footer .box-container .box .links:hover i{
+    padding-right: 2rem;
+    transition: all 0.3s ease;
+}
+
+.footer .box-container .box p{
+    line-height: 1.8;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0; 
+}
+
+.footer .box-container .box .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    margin-left: 0.2rem;
+    background: #eee;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.footer .box-container .box .share a:hover{
+    background: rgb(11, 115, 189);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* scroll up button styling */
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: rgb(11, 115, 189);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+
+/* responsive media queries start */
+
+@media (max-width: 1300px){
+    .home .max-width-container{
+        margin-left: 0px;
+    }
+}
+
+@media (max-wdith: 991px){
+    .max-width-container {
+        padding: 0 50px;
+    }  
+}
+
+@media (max-width: 947px){
+
+    /* .max-width {
+        padding: 0 50px;
+    }    */
+
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .nav_head .menu-nav{
+        position: fixed;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+
+    .nav_head .menu-nav.active{
+        left: 0;
+
+    }
+
+    .nav_head .menu-nav li{
+        display: block;
+    }
+
+    .nav_head .menu-nav li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .home .home-content .text-1 {
+        font-size: 70px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 25px;
+    }
+
+    .home .home-content .signupBtn{
+        width: 35%;
+        margin: auto;
+    }
+
+    .home .home-content .btn1{
+        font-size: 16px;
+        padding: 10px 25px;
+        margin-top: 15px;
+    }
+
+    .home .max-width-container {
+        margin: auto;
+    }
+
+    .home .home-content{
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 690px) {
+    .max-width-container{
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-1 {
+        font-size: 65px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 20px;
+        margin-left: 35px;
+    }
+
+    .home .home-content .signupBtn{
+        width: 31%;
+        margin: auto;
+    }
+
+    .home .home-content .btn1{
+        font-size: 14px;
+        padding: 8px 18px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 625px){
+    .products .product-content .card{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 500px){
+
+    .home .home-content .text-1 {
+        font-size: 55px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 17px;
+        margin-left: 22px;
+    }
+
+    .home .home-content .signupBtn{
+        width: 33%;
+        margin: auto;
+    }
+
+    .home .home-content .btn1{
+        font-size: 12px;
+        padding: 8px 18px;
+        margin-top: 15px;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .home .home-content .text-1 {
+        font-size: 48px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 15px;
+        margin-left: 22px;
+    }
+
+    .home .home-content .signupBtn{
+        width: 33%;
+        margin: auto;
+    }
+
+    .home .home-content .btn1{
+        font-size: 10px;
+        padding: 8px 16px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+    .nav_head .max-width-container-container .logo-head a{
+        font-size: 30px;
+    }
+
+    .home .home-content .text-1 {
+        font-size: 44px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 14px;
+        margin-left: 20px;
+    }
+
+    .home .home-content .signupBtn{
+        width: 35%;
+        margin: auto;
+    }
+
+    .products .title::after{
+        font-size: 18px;
+    }
+
+}
