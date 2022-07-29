@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">MyCerti</label>
+        <ul>
+            <li><a href="#">Back To Home Page</a></li>
+        </ul>
+    </nav> -->
+
+    <!-- <section class="home" id="home">
+        <div class="content">
+            <h3>Here are your Achievements!</h3>
+            <p>Just Click The Download Button To Get Them</p>
+        </div>
+    </section> -->
+
+    <section class="header">
+        <nav>
+            <a href="#home" class="logo">My<span>Certi</span></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">BACK TO HOME PAGE</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Your Achievements Are Right Here!</h1>
+            <p>Just Click The <span class="animate-charcter">DOWNLOAD</span> Button To Get Them</p>
+        </div>
+    </section>
+
+    <div class="table-container">
+        <h1 class="heading1">Certificates</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>Programme</th>
+                    <th>Branch</th>
+                    <th>Course</th>
+                    <th>Click Here To</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="S No.">1</td>
+                    <td data-label="Programme">BTech</td>
+                    <td data-label="Branch">CSE</td>
+                    <td data-label="Course">Web Development</td>
+                    <td data-label="Click Here To"><a href="#" class="btn">Downlaod</a></td>
+                </tr>
+                <tr>
+                    <td data-label="S No.">1</td>
+                    <td data-label="Programme">BTech</td>
+                    <td data-label="Branch">CSE</td>
+                    <td data-label="Course">Web Development</td>
+                    <td data-label="Click Here To"><a href="#" class="btn">Downlaod</a></td>
+                </tr>
+                <tr>
+                    <td data-label="S No.">1</td>
+                    <td data-label="Programme">BTech</td>
+                    <td data-label="Branch">CSE</td>
+                    <td data-label="Course">Web Development</td>
+                    <td data-label="Click Here To"><a href="#" class="btn">Downlaod</a></td>
+                </tr>
+                <tr>
+                    <td data-label="S No.">1</td>
+                    <td data-label="Programme">BTech</td>
+                    <td data-label="Branch">CSE</td>
+                    <td data-label="Course">Web Development</td>
+                    <td data-label="Click Here To"><a href="#" class="btn">Downlaod</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-container" id="bottom">
+        <h1 class="heading2">Badges</h1> 
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>S No.</th>
+                    <th>Programme</th>
+                    <th>Branch</th>
+                    <th>Course</th>
+                    <th>Click Here To</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="S No.">1</td>
+                    <td data-label="Programme">BTech</td>
+                    <td data-label="Branch">CSE</td>
+                    <td data-label="Course">Web Development</td>
+                    <td data-label="Click Here To"><a href="#" class='butn butn__new'><span>Sign Up</span></a></td>
+                </tr>
+                <tr>
+                    <td data-label="S No.">1</td>
+                    <td data-label="Programme">BTech</td>
+                    <td data-label="Branch">CSE</td>
+                    <td data-label="Course">Web Development</td>
+                    <td data-label="Click Here To"><a href="#" class="btn">Downlaod</a></td>
+                </tr>
+                <tr>
+                    <td data-label="S No.">1</td>
+                    <td data-label="Programme">BTech</td>
+                    <td data-label="Branch">CSE</td>
+                    <td data-label="Course">Web Development</td>
+                    <td data-label="Click Here To"><a href="#" class="btn">Downlaod</a></td>
+                </tr>
+                <tr>
+                    <td data-label="S No.">1</td>
+                    <td data-label="Programme">BTech</td>
+                    <td data-label="Branch">CSE</td>
+                    <td data-label="Course">Web Development</td>
+                    <td data-label="Click Here To"><a href="#" class="btn">Downlaod</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <section class="footer">
+        <p>Pune, Maharashtra, India | Phone: 0123456789 | Email: danalitics@gmail.com</p>
+        <p>© Copyright 2021 Danalitic. All rights reserved.</p>
+    </section>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right = "0";
+            navLinks.style.display = "block";
+        }
+
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+            navLinks.style.display = "none";
+        }
+    </script>
+</body>
+</html>
