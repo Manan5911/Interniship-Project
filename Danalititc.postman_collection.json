@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "e325afe6-602b-42cf-bda6-57e6e38a6437",
+		"name": "Danalititc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n      \"name\":\"Deepanshu\",\r\n      \"last\":\"Gupta\",\r\n      \"email\":\"deepanshu@gupta.com\",\r\n     \"password\":\"12345\"\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n      \"email\":\"deepanshu@gupta.com\",\r\n     \"password\":\"12345\"\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Certi",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmQ5MjE5ODQ4ZWQ0ZjFhNWNkZDY0NTUiLCJpYXQiOjE2NTgzOTcwOTN9.UUSdOmbToHJtv03N2rOOD1SXb0FEbMl8JNsayXHTpQc",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n      \"name\":\"Deepanhsu\"\r\n      \"email\":\"deepanshu@gupta.com\"\r\n\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/addCerti/62d9219848ed4f1a5cdd6455",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"addCerti",
+						"62d9219848ed4f1a5cdd6455"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
